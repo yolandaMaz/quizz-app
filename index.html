@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzo</title>
+</head>
+<body>
+    <header>
+        <h1 id="quizz-title">Quizzo</h1>
+        <p>Select a topic to get started</p>
+    </header>
+
+    <!--Topic Selection-->
+        <section id="topics">
+            <div class="topic-card" id="topic-economics">
+                <h2>Economics</h2>
+            </div>
+            <div class="topic-card" id="topic-sports">
+                <h2>Sports</h2>
+            </div>
+            <div class="topic-card" id="topic-Guess the logo">
+                <h2>Guess the logo</h2>
+            </div>
+            <div class="topic-card" id="topic-Shakespeare/Popstars">
+                <h2>Shakespeare/Popstars</h2>
+            </div>
+        </section>
+
+        <!--Quizz Container (appears when topic is chosen)-->
+        <section id="quizz-container" style="display:none;">
+            
+            <!--questions and answers-->
+            <div id="question-area">
+                <h2 id="question-text">Question will appear here</h2>
+                <form id="answer-options">
+                    <label><input type="radio" name="answer" value="A"> option A</label><br>
+                    <label><input type="radio" name="answer" value="B"> option B</label><br>
+                    <label><input type="radio" name="answer" value="C"> option C</label><br>
+                    <label><input type="radio" name="answer" value="D"> option D</label>
+                </form>
+            </div>
+
+            <!--score-->
+            <div id="quiz-progress">
+                <p id="question-number">Question 1 of X</p>
+                <p id="current-score">Score: 0</p>
+            </div>
+
+            <!--Results-->
+            <div id="result-screen" style="display:none;">
+                <h2>Your Results</h2>
+                <p id="final-score">You scored X out of Y</p>
+                <p id="percentage">Percentage: Z%</p>
+                <div id="answer-review">
+                    <!--javascript-->
+                </div>
+                <button id="restart-btn">Restart Quiz</button>
+                <button id="new-quiz-btn">Choose Another Topic</button>
+            </div>
+        </section>
+</body>
+</html>
