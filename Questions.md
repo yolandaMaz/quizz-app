@@ -81,7 +81,6 @@ C. PlayStation
 D. Steam
 Answer: Xbox
 
-
 <!-- Sports category -->
 
 1) Which country has won the most FIFA World Cup titles?
