@@ -147,3 +147,72 @@ Answer: 5
 <!-- Popstars category -->
 
 <!-- Economics category -->
+1) What is demand?
+ A. The quantity of goods producers are willing to sell
+ B. The desire and ability of consumers to purchase goods or services
+ C. The total value of goods produced in a country
+ D. The cost of producing a good
+Answer: The desire and ability of consumers to purchase goods or services
+
+2) What happens to the price of a product when demand increases and supply stays the same?
+A. The price stays decreases
+B. The price stays the same
+C. The price increases
+D. The product disappears from the market
+Answer: The price increases
+
+3) What is inflation?
+A. A rise in the general price level of goods and services
+B. A decrease in consumer demand
+C. An increase in supply of goods
+D. A fall in employment levels
+Answer: A rise in the general price level of goods and services
+
+4) What does scarcity mean in economics?
+A. Unlimited resources available for production
+B. Limited resources compared to unlimited wants
+C. A surplus of goods in the market
+D. A situation where demand is zero
+Answer: Limited resources compared to unlimited wants
+
+5) Define opportunity cost
+A. The money spent on producing a good
+B. The benefit of the next best alternative forgone
+C. The total revenue earned by a firm
+D. The cost of raw materials
+Answer: The benefit of the next best alternative forgone
+
+6) What is the difference between needs and wants
+A. Needs are essential for survival, wants are not
+B. Needs are luxuries, wants are necessities
+C. Needs are always expensive, wants are cheap
+D. Needs are unlimited, wants are limited
+Answer: Needs are essential for survival, wants are not
+
+7) What is equilibrium?
+A. When demand exceeds supply
+B. When supply exceeds demand
+C. When demand equals supply
+D. When prices are fixed by the government
+Answer: When demand equals supply
+
+8) What does GDP stand for?
+A. Gross Domestic Product
+B. General Demand Price
+C. Government Development Plan
+D. Global Distribution Policy
+Answer: Gross Domestic Product
+
+9) In a free market, who decides what goods and services are produced?
+A. The government
+B. Consumers and producers through supply and demand
+C. International organizations
+D. Banks and financial institutions
+Answer: Consumers and producers through supply and demand
+
+10) If the price of coffee rises sharply, what is likely to happen to the demand for the tea(a substitute)?
+A. Demand for tea decreases
+B. Demand for tea increases
+C. Demand for tea stays the same
+D. Tea disappears from the market
+Answer: Demand for tea increases
