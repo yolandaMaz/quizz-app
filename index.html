@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quizzo</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div id="quiz-logo" aria-label="Quizzo logo">Quizzo</div>
+        <p>Pick a challenge and play!</p>
+    </header>
+
+    <!-- Topic Selection -->
+    <section id="topics">
+        <div class="topic-card" id="topic-logo">
+            <h2>Logo Mania</h2>
+
+            <div class="topic-description">
+                <div class="topic-illustration" aria-label="Logo Mania">🧠</div>
+                <p>Guess the brands from their logos!</p>
+            </div>
+
+            <a href="#" class="start-button" data-quiz="logo">
+                Start Quiz ➜
+            </a>
+        </div>
+
+        <div class="topic-card" id="topic-sports">
+            <h2>Game On!</h2>
+
+            <div class="topic-description">
+                <div class="topic-illustration" aria-label="Game On">🏆</div>
+                <p>Sports, teams and legendary moments!</p>
+            </div>
+
+            <a href="#" class="start-button" data-quiz="sports">
+                Start Quiz ➜
+            </a>
+        </div>
+
+        <div class="topic-card" id="topic-popstars">
+            <h2>Who Said It?</h2>
+
+            <div class="topic-description">
+                <div class="topic-illustration" aria-label="Who Said It">🎤</div>
+                <p>Classic lines or chart-topping rhymes?</p>
+            </div>
+
+            <a href="#" class="start-button" data-quiz="popstars">
+                Start Quiz ➜
+            </a>
+        </div>
+
+        <div class="topic-card" id="topic-economics">
+            <h2>Money Moves</h2>
+
+            <div class="topic-description">
+                <div class="topic-illustration" aria-label="Money Moves">💰</div>
+                <p>Finance basics and smart choices!</p>
+            </div>
+
+            <a href="#" class="start-button" data-quiz="money">
+                Start Quiz ➜
+            </a>
+        </div>
+    </section>
+
+    <!-- Quiz Container -->
+    <section id="quiz-container">
+        <button id="back-button" class="back-button" type="button">
+            ← Choose another topic
+        </button>
+
+        <div id="quiz-header">
+            <h2 id="quiz-topic">QUIZ</h2>
+
+            <div id="quiz-progress">
+                <p id="question-number">Question 1 of 10</p>
+                <p id="current-score">Score: 0</p>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-track">
+            <span id="progress-bar"></span>
+        </div>
+
+        <!-- Question -->
+        <div id="question-area">
+            <h2 id="question-text">Question will appear here</h2>
+
+            <!-- Logo image -->
+            <div id="question-image-container">
+                <img id="question-image" src="" alt="Quiz logo">
+            </div>
+
+            <!-- Answers -->
+            <div id="answer-options"></div>
+
+            <!-- Feedback -->
+            <p id="feedback" role="status"></p>
+
+            <!-- Next button -->
+            <button id="next-button" type="button">
+                Next Question →
+            </button>
+        </div>
+
+        <!-- Results -->
+        <div id="result-screen">
+            <h2>Your Results</h2>
+
+            <p id="final-score">
+                You scored 0 out of 10
+            </p>
+
+            <p id="percentage">
+                Percentage: 0%
+            </p>
+
+            <div id="answer-review"></div>
+
+            <button id="restart-btn" type="button">
+                Restart Quiz
+            </button>
+
+            <button id="new-quiz-btn" type="button">
+                Choose Another Topic
+            </button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
