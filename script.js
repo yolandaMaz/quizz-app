@@ -231,10 +231,34 @@ let currentQuizType = "";
 let currentQuestionIndex = 0;
 let score = 0;
 let userAnswers = [];
+let timeLeft = 300;
+let timerInterval;
 
+const quizTopicInfo = {
+    logo: {
+        name: "Logo Mania",
+        image: "images/topics/logo mania.png"
+    },
+
+    sports: {
+        name: "Game On!",
+        image: "images/topics/game on.png"
+    },
+
+    popstars: {
+        name: "Who Said It?",
+        image: "images/topics/who said it.png"
+    },
+
+    economics: {
+        name: "Money Moves",
+        image: "images/topics/money moves.png"
+    }
+};
 
 const topicsSection = document.getElementById("topics");
 const quizContainer = document.getElementById("quiz-container");
+const homeHeader = document.querySelector("header");
 
 const questionArea = document.getElementById("question-area");
 const questionText = document.getElementById("question-text");
@@ -244,13 +268,22 @@ const questionNumber = document.getElementById("question-number");
 const currentScore = document.getElementById("current-score");
 
 const resultScreen = document.getElementById("result-screen");
-const finalScore = document.getElementById("final-score");
-const percentage = document.getElementById("percentage");
+const scoreValue = document.getElementById("score-value");
+const totalValue = document.getElementById("total-value");
+const percentageValue = document.getElementById("percentage-value");
 const answerReview = document.getElementById("answer-review");
 
 const newQuizButton = document.getElementById("new-quiz-btn");
 
+const currentTopicImage = document.getElementById("current-topic-image");
+const currentTopicName = document.getElementById("current-topic-name");
+const currentTopic = document.getElementById("current-topic");
 
+const quizTimer = document.getElementById("quiz-timer");
+const timerDisplay = document.getElementById("timer-display");
+
+const progressFill = document.getElementById("progress-fill");
+const progressBar = document.getElementById("progress-bar");
 
 const feedbackMessage = document.createElement("div");
 feedbackMessage.id = "feedback-message";
@@ -311,12 +344,26 @@ function startQuiz(quizType) {
     currentQuizType = quizType;
     currentQuiz = quizzes[quizType];
 
+    document.body.classList.add("quiz-active");
+    document.body.classList.remove("results-active");
+
+    const topicInfo = quizTopicInfo[quizType];
+
+    currentTopicName.textContent = topicInfo.name;
+    currentTopicImage.src = topicInfo.image;
+    currentTopicImage.alt = topicInfo.name;
+
+    currentTopic.style.display = "flex";
+    progressBar.style.display = "block";
+    quizTimer.style.display = "block";
+
     currentQuestionIndex = 0;
     score = 0;
     userAnswers = [];
 
     topicsSection.style.display = "none";
     quizContainer.style.display = "block";
+    homeHeader.style.display = "none";
 
     resultScreen.style.display = "none";
     questionArea.style.display = "block";
@@ -327,6 +374,8 @@ function startQuiz(quizType) {
 
     currentScore.textContent = "Score: 0";
 
+    startTimer();
+
     displayQuestion();
 
     quizContainer.scrollIntoView({
@@ -335,7 +384,45 @@ function startQuiz(quizType) {
     });
 }
 
+function startTimer() {
+    clearInterval(timerInterval);
 
+    timeLeft = 300;
+
+    timerDisplay.textContent = "05:00";
+    timerDisplay.classList.remove("timer-warning");
+
+    timerInterval = setInterval(() => {
+        timeLeft--;
+
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+
+        timerDisplay.textContent =
+            `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+
+        if (timeLeft <= 60) {
+            timerDisplay.classList.add("timer-warning");
+        }
+
+        if (timeLeft <= 0) {
+            clearInterval(timerInterval);
+
+            timerDisplay.textContent = "00:00";
+
+            const selectedAnswer = document.querySelector(
+                'input[name="answer"]:checked'
+            );
+
+            if (selectedAnswer) {
+                saveCurrentAnswer(selectedAnswer.value);
+            }
+
+            showResults();
+        }
+
+    }, 1000);
+}
 
 function displayQuestion() {
     const question = currentQuiz[currentQuestionIndex];
@@ -344,6 +431,11 @@ function displayQuestion() {
 
     questionNumber.textContent =
         `Question ${currentQuestionIndex + 1} of ${currentQuiz.length}`;
+
+    const progressPercentage =
+    ((currentQuestionIndex + 1) / currentQuiz.length) * 100;
+
+    progressFill.style.width = `${progressPercentage}%`;    
 
     currentScore.textContent = `Score: ${score}`;
 
@@ -503,6 +595,15 @@ previousButton.addEventListener("click", () => {
 
 
 function showResults() {
+    clearInterval(timerInterval);
+    quizTimer.style.display = "none";
+
+    document.body.classList.remove("quiz-active");
+    document.body.classList.add("results-active");
+
+    currentTopic.style.display = "none";
+    progressBar.style.display = "none";
+
     questionArea.style.display = "none";
     quizControls.style.display = "none";
     feedbackMessage.style.display = "none";
@@ -517,11 +618,9 @@ function showResults() {
         (score / totalQuestions) * 100
     );
 
-    finalScore.textContent =
-        `You scored ${score} out of ${totalQuestions}`;
-
-    percentage.textContent =
-        `Percentage: ${scorePercentage}%`;
+    scoreValue.textContent = score;
+    totalValue.textContent = totalQuestions;
+    percentageValue.textContent = `${scorePercentage}%`;
 
     createAnswerReview();
 }
@@ -568,7 +667,11 @@ function createAnswerReview() {
 
 
 newQuizButton.addEventListener("click", () => {
+    document.body.classList.remove("quiz-active");
+    document.body.classList.remove("results-active");
+    
     quizContainer.style.display = "none";
+    homeHeader.style.display = "flex";
     topicsSection.style.display = "flex";
 
     document.getElementById("quiz-progress").style.display = "flex";
