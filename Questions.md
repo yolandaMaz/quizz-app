@@ -146,6 +146,76 @@ Answer: 5
 
 <!-- Popstars category -->
 
+1) “Is this the real life? Is this just fantasy?”
+A. ABBA
+B. Bon Jovi 
+C. Queen
+D. Aerosmith
+Answer: Queen
+
+2) “We found love in a hopeless place.” 
+A. Katy Perry
+B. Beyoncé
+C. Lady Gaga
+D. Rihanna
+Answer: Rihanna
+
+3) “Hello from the other side.”
+A. Taylor Swift
+B. Sia
+C. Adele
+D. Ed Sheeran
+Answer: Adele
+
+4) “It's gonna be a bright, bright, sunshiny day.” 
+A. Elton John
+B. Stevie Wonder
+C. Bruno Mars
+D. Bob Marley
+Answer: Bab Marley
+
+5) “Shake it off, shake it off.” 
+A. Dua Lipa
+B. Ariana Grande
+C. Miley Cyrus
+D. Taylor Swift
+Answer Taylor Swift
+
+6) “To be, or not to be: that is the question.” 
+A. Romeo
+B. Hamlet
+C. Othello
+D. Macbeth
+Answer: Hamlet
+
+7) “Just gonna stand there and watch me burn.”
+A. 50 Cent
+B. Jay-Z
+C. Eminem
+D. Drake
+Answer: Eminem
+
+8) “Out, damned spot! Out, I say!”
+A. Lady Macbeth
+B. Juliet
+C. Desdemona
+D. Ophelia
+Answer: Lady Macbeth
+
+9) “Cause baby, you're a firework.” 
+A. Katy Perry
+B. Kelly Clarkson
+C. P!nk
+D. Christina Aguilera
+Answer: Katy Perry
+
+10) “O, beware, my lord, of jealousy; It is the green-eyed monster.” 
+A. Romeo
+B. Hamlet
+C. Iago
+D. Macbeth
+Answer: Iago
+
 <!-- Economics category -->
 1) What is demand?
  A. The quantity of goods producers are willing to sell
