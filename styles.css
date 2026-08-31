@@ -369,6 +369,42 @@ header p {
     font-size: 18px;
     color: #8edbd6;
 }
+#current-topic::before {
+    content: "✦";
+    position: absolute;
+    left: 25%;
+    top: -10px;
+    font-size: 22px;
+    color: #ffd447;
+    transform: rotate(-15deg);
+}
+
+#current-topic::after {
+    content: "〰";
+    position: absolute;
+    right: 25%;
+    top: 5px;
+    font-size: 30px;
+    color: #ffb5c5;
+    transform: rotate(-15deg);
+}
+#quiz-container::before {
+    content: "◆";
+    position: absolute;
+    left: 20px;
+    top: 120px;
+    font-size: 25px;
+    color: #ffd447;
+}
+
+#quiz-container::after {
+    content: "●";
+    position: absolute;
+    right: 40px;
+    top: 200px;
+    font-size: 18px;
+    color: #8edbd6;
+}
 
 #quiz-timer {
     text-align: center;
