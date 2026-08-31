@@ -490,10 +490,31 @@ function displayQuestion() {
     questionNumber.textContent =
         `Question ${currentQuestionIndex + 1} of ${currentQuiz.length}`;
 
-    const progressPercentage =
+       const progressPercentage =
     ((currentQuestionIndex + 1) / currentQuiz.length) * 100;
 
-    progressFill.style.width = `${progressPercentage}%`;    
+progressFill.style.width = `${progressPercentage}%`;
+
+// Change progress bar colour
+progressFill.classList.remove(
+    "progress-low",
+    "progress-medium",
+    "progress-good",
+    "progress-complete"
+);
+
+if (progressPercentage <= 25) {
+    progressFill.classList.add("progress-low");
+} 
+else if (progressPercentage <= 50) {
+    progressFill.classList.add("progress-medium");
+} 
+else if (progressPercentage <= 75) {
+    progressFill.classList.add("progress-good");
+} 
+else {
+    progressFill.classList.add("progress-complete");
+}
 
     currentScore.textContent = `Score: ${score}`;
 
