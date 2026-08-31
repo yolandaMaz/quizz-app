@@ -288,22 +288,26 @@ let timerInterval;
 const quizTopicInfo = {
     logo: {
         name: "Logo Mania",
-        image: "images/topics/logo mania.png"
+        image: "images/topics/logo mania.png",
+        color: "#039d9a"
     },
 
     sports: {
         name: "Game On!",
-        image: "images/topics/game on.png"
+        image: "images/topics/game on.png",
+        color: "#fd7602"
     },
 
     popstars: {
         name: "Who Said It?",
-        image: "images/topics/who said it.png"
+        image: "images/topics/who said it.png",
+        color: "#6955ba"
     },
 
     economics: {
         name: "Money Moves",
-        image: "images/topics/money moves.png"
+        image: "images/topics/money moves.png",
+        color: "#039945"
     }
 };
 
@@ -330,6 +334,7 @@ const newQuizButton = document.getElementById("new-quiz-btn");
 const currentTopicImage = document.getElementById("current-topic-image");
 const currentTopicName = document.getElementById("current-topic-name");
 const currentTopic = document.getElementById("current-topic");
+
 
 const quizTimer = document.getElementById("quiz-timer");
 const timerDisplay = document.getElementById("timer-display");
@@ -404,6 +409,7 @@ function startQuiz(quizType) {
     currentTopicName.textContent = topicInfo.name;
     currentTopicImage.src = topicInfo.image;
     currentTopicImage.alt = topicInfo.name;
+    currentTopicName.style.color = topicInfo.color;
 
     currentTopic.style.display = "flex";
     progressBar.style.display = "block";

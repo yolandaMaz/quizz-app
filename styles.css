@@ -50,6 +50,19 @@ header {
 
 #quiz-logo {
     height: 150px;
+    animation: logoPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.08) rotate(1deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 header p {
@@ -231,6 +244,7 @@ header p {
     .start-button {
         display: inline-block;
         padding: 12px 35px;
+        margin: 20px;
     }
 }
 
@@ -310,15 +324,14 @@ header p {
 }
 
 #current-topic-image {
-    width: 55px;
-    height: 55px;
+    width: 65px;
+    height: 65px;
     object-fit: contain;
 }
 
 #current-topic-name {
     margin: 0;
     font-size: 28px;
-    color: #0c112c;
 }
 
 #quiz-timer {
