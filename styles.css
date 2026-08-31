@@ -34,10 +34,10 @@ nav {
 }
 
 .nav-icon {
-    color: #0c112c;
+    color: #f9f9f9;
     font-size: 28px;
-    background-color: white;
-    border-radius: 50%;
+    background-color: rgb(57, 37, 4);
+    border-radius: 100%;
     padding: 5px;
 }
 
@@ -81,7 +81,7 @@ header p {
 }
 
 .topic-card {
-    height: 350px;
+    height: 380px;
     width: 300px;
     border-radius: 25px;
     padding: 5px;
@@ -149,7 +149,7 @@ header p {
 }
 
 #topic-logo {
-    border: 1px solid #039d9a;
+    border: 2px solid #039d9a;
     background-color: #ecf6f4;
 }
 
@@ -162,7 +162,7 @@ header p {
 }
 
 #topic-sports {
-    border: 1px solid #fd7602;
+    border: 2px solid #fd7602;
     background-color: #fef5e8;
 }
 
@@ -175,7 +175,7 @@ header p {
 }
 
 #topic-popstars {
-    border: 1px solid #6955ba;
+    border: 2px solid #6955ba;
     background-color: #f5eff5;
 }
 
@@ -188,7 +188,7 @@ header p {
 }
 
 #topic-economics {
-    border: 1px solid #039945;
+    border: 2px solid #039945;
     background-color: #f4f8ea;
 }
 
@@ -198,6 +198,18 @@ header p {
 
 #topic-economics .start-button {
     background-color: #039945;
+}
+
+#high-score {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0c112c;
+    padding-top: 5px;
+}
+
+#high-score-value {
+    color: #be4107c6;
+    font-size: 24px;
 }
 
 @media (max-width: 1300px) {
