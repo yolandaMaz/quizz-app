@@ -324,6 +324,7 @@ const totalValue = document.getElementById("total-value");
 const percentageValue = document.getElementById("percentage-value");
 const answerReview = document.getElementById("answer-review");
 
+const restartButton = document.getElementById("restart-btn");
 const newQuizButton = document.getElementById("new-quiz-btn");
 
 const currentTopicImage = document.getElementById("current-topic-image");
@@ -736,7 +737,9 @@ function createAnswerReview() {
     });
 }
 
-
+restartButton.addEventListener("click", () => {
+    startQuiz(currentQuizType);
+});
 
 newQuizButton.addEventListener("click", () => {
     document.body.classList.remove("quiz-active");
