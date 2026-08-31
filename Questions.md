@@ -172,7 +172,7 @@ A. Elton John
 B. Stevie Wonder
 C. Bruno Mars
 D. Bob Marley
-Answer: Bab Marley
+Answer: Bob Marley
 
 5) “Shake it off, shake it off.” 
 A. Dua Lipa

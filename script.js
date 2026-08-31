@@ -117,7 +117,58 @@ const quizzes = {
         }
     ],
 
-    popstars: [],
+    popstars: [
+        {
+            question: "“Is this the real life? Is this just fantasy?”",
+            answers: ["ABBA", "Bon Jovi", "Queen", "Aerosmith"],
+            correctAnswer: "Queen"
+        },
+        {
+            question: "“We found love in a hopeless place.”",
+            answers: ["Katy Perry", "Beyoncé", "Lady Gaga", "Rihanna"],
+            correctAnswer: "Rihanna"
+        },
+        {
+            question: "“Hello from the other side.”",
+            answers: ["Taylor Swift", "Sia", "Adele", "Ed Sheeran"],
+            correctAnswer: "Adele"
+        },
+        {
+            question: "“It's gonna be a bright, bright, sunshiny day.”",
+            answers: ["Elton John", "Stevie Wonder", "Bruno Mars", "Bob Marley"],
+            correctAnswer:"Bob Marley"
+        },
+        {
+            question: "“Shake it off, shake it off.” ",
+            answers: ["Dua Lipa", "Ariana Grande", "Miley Cyrus", "Taylor Swift"],
+            correctAnswer: "Taylor Swift"
+        },
+        {
+            question: "“To be, or not to be: that is the question.” ",
+            answers: ["Romeo", "Hamlet", "Othello", "Macbeth"],
+            correctAnswer: "Hamlet"
+        },
+        {
+            question:"“Just gonna stand there and watch me burn.”",
+            answers: [ "50 Cent", "Jay-Z", "Eminem", "Drake" ],
+            correctAnswer: "Eminem"
+        },
+        {
+            question: "“Out, damned spot! Out, I say!”",
+            answers: [ "Lady Macbeth", "Juliet", "Desdemona", "Ophelia" ],
+            correctAnswer: "Lady Macbeth"
+        },
+        {
+            question: "“Cause baby, you're a firework.”",
+            answers: [ "Katy Perry", "Kelly Clarkson", "P!nk", "Christina Aguilera" ],
+            correctAnswer: "Katy Perry"
+        },
+        {
+            question: "“O, beware, my lord, of jealousy; It is the green-eyed monster.”",
+            answers: ["Romeo", "Hamlet", "Iago", "Macbeth"],
+            correctAnswer: "Iago"
+        },
+    ],
 
     economics: [
         {
@@ -681,3 +732,4 @@ newQuizButton.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
